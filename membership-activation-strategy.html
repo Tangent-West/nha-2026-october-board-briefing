@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="National Hemp Association membership activation strategy executive dashboard.">
+  <title>Membership Activation Strategy | NHA 2026 October Board Briefing</title>
+  <link rel="stylesheet" href="october.css">
+  <style>
+    :root {
+      --brown: #6e3b1f;
+      --green: #7fa83b;
+      --cream: #f7f5ef;
+      --white: #ffffff;
+      --charcoal: #2e2e2e;
+      --ink: #1f2320;
+      --muted: #6d7067;
+      --line: rgba(46, 46, 46, 0.14);
+      --blue: #233a4d;
+      --red: #8b2f28;
+      --shadow: 0 20px 60px rgba(31, 35, 32, 0.12);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--charcoal);
+      background: var(--cream);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .serif {
+      font-family: Georgia, Cambria, "Times New Roman", serif;
+    }
+
+    .top-nav {
+      position: fixed;
+      z-index: 80;
+      top: 0;
+      right: 0;
+      left: 0;
+      border-bottom: 1px solid rgba(46, 46, 46, 0.1);
+      background: rgba(247, 245, 239, 0.94);
+      color: var(--charcoal);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 8px 30px rgba(31, 35, 32, 0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(1380px, calc(100% - 32px));
+      min-height: 72px;
+      margin: 0 auto;
+      gap: 24px;
+    }
+
+    .brand-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: max-content;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+    }
+
+    .brand-mark img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-size: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      font-size: 0.58rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 28px 0 24px;
+      opacity: 0.78;
+      white-space: nowrap;
+    }
+
+    .nav-links a.active,
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .nav-links a.active::after {
+      position: absolute;
+      right: 0;
+      bottom: 17px;
+      left: 0;
+      height: 2px;
+      content: "";
+      background: var(--green);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 2px;
+      background: currentColor;
+      box-shadow: 0 6px 0 currentColor, 0 -6px 0 currentColor;
+    }
+
+    .mobile-panel {
+      display: none;
+      width: min(100%, 1280px);
+      margin: 0 auto;
+      padding: 0 16px 18px;
+    }
+
+    .mobile-panel a {
+      display: block;
+      border-top: 1px solid rgba(127, 168, 59, 0.2);
+      padding: 14px 4px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .mobile-panel.open {
+      display: block;
+    }
+
+    .section {
+      position: relative;
+      padding: clamp(76px, 8vw, 118px) 0;
+      overflow: hidden;
+    }
+
+    .section-inner {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: var(--brown);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section-kicker::before {
+      display: block;
+      width: 36px;
+      height: 2px;
+      content: "";
+      background: var(--green);
+    }
+
+    .section-title {
+      max-width: 900px;
+      margin: 0;
+      color: var(--ink);
+      font-family: Georgia, Cambria, "Times New Roman", serif;
+      font-size: clamp(2.4rem, 5.5vw, 6rem);
+      font-weight: 500;
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .section-subtitle {
+      max-width: 780px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.7vw, 1.2rem);
+      line-height: 1.7;
+    }
+
+    .hero {
+      min-height: 88svh;
+      display: grid;
+      place-items: center;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(20, 22, 20, 0.9), rgba(20, 22, 20, 0.58)),
+        url("assets/leadership-room.png") center / cover;
+    }
+
+    .hero .section-inner {
+      padding-top: 72px;
+    }
+
+    .hero .section-kicker,
+    .hero .section-title,
+    .hero .section-subtitle {
+      color: var(--white);
+    }
+
+    .hero .section-subtitle {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 780px;
+      margin-top: 34px;
+    }
+
+    .hero-stat {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius);
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-family: Georgia, Cambria, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .hero-stat span {
+      display: block;
+      margin-top: 8px;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 0 22px;
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      line-height: 1;
+      text-transform: uppercase;
+      transition: transform 160ms ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--white);
+      color: var(--brown);
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .btn-outline {
+      border-color: rgba(255, 255, 255, 0.54);
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .grid-4,
+    .grid-3,
+    .grid-2 {
+      display: grid;
+      gap: 18px;
+      margin-top: 42px;
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.84);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+    }
+
+    .kpi-card {
+      min-height: 150px;
+      padding: 24px;
+    }
+
+    .kpi-number {
+      color: var(--brown);
+      font-family: Georgia, Cambria, "Times New Roman", serif;
+      font-size: clamp(2.2rem, 4vw, 3.9rem);
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .kpi-label {
+      margin-top: 12px;
+      color: var(--ink);
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .kpi-caption {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .reach-panel {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      margin-top: 44px;
+      padding: clamp(28px, 4vw, 46px);
+      color: var(--white);
+      background: var(--charcoal);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .reach-metric {
+      border-left: 4px solid var(--green);
+      padding-left: 22px;
+    }
+
+    .reach-metric strong {
+      display: block;
+      font-family: Georgia, Cambria, "Times New Roman", serif;
+      font-size: clamp(2.2rem, 5vw, 4.8rem);
+      font-weight: 500;
+      line-height: 0.95;
+    }
+
+    .reach-metric span {
+      display: block;
+      margin-top: 12px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .reach-panel p {
+      grid-column: 1 / -1;
+      max-width: 900px;
+      margin: 8px 0 0;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .funnel {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 48px;
+      align-items: center;
+    }
+
+    .funnel-step {
+      position: relative;
+      min-height: 132px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius);
+      padding: 16px;
+      color: var(--white);
+      background: var(--charcoal);
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .funnel-step:nth-child(1),
+    .funnel-step:nth-child(3),
+    .funnel-step:nth-child(5),
+    .funnel-step:nth-child(7) {
+      background: var(--brown);
+    }
+
+    .funnel-step::after {
+      position: absolute;
+      right: -13px;
+      z-index: 2;
+      color: var(--green);
+      content: ">";
+      font-size: 1.4rem;
+      font-weight: 900;
+    }
+
+    .funnel-step:last-child::after {
+      display: none;
+    }
+
+    .strategy-card {
+      min-width: 0;
+      min-height: 360px;
+      overflow: hidden;
+      padding: 26px;
+    }
+
+    .phase-tag,
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 8px 10px;
+      font-size: 0.68rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .phase-tag {
+      color: var(--brown);
+      background: rgba(110, 59, 31, 0.08);
+    }
+
+    .status-chip {
+      margin-top: 16px;
+      color: var(--white);
+      background: var(--blue);
+    }
+
+    .status-chip.green {
+      background: var(--green);
+    }
+
+    .strategy-card h3,
+    .hemi-panel h3 {
+      margin: 18px 0 0;
+      color: var(--ink);
+      font-family: Georgia, Cambria, "Times New Roman", serif;
+      font-weight: 500;
+      line-height: 1.02;
+    }
+
+    .strategy-card h3 {
+      font-size: clamp(1.55rem, 2vw, 2.05rem);
+      line-height: 1.08;
+      overflow-wrap: anywhere;
+    }
+
+    .hemi-panel h3 {
+      font-size: clamp(1.7rem, 3vw, 2.8rem);
+    }
+
+    .check-list {
+      display: grid;
+      gap: 9px;
+      margin: 22px 0 0;
+      padding: 0;
+      color: var(--charcoal);
+      list-style: none;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.94rem;
+      line-height: 1.35;
+    }
+
+    .check {
+      display: inline-grid;
+      flex: 0 0 22px;
+      width: 22px;
+      height: 22px;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--white);
+      background: var(--green);
+      font-size: 0.75rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .hemi-panel {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 34px;
+      margin-top: 48px;
+      border-radius: var(--radius);
+      padding: clamp(28px, 4.5vw, 54px);
+      color: var(--white);
+      background:
+        linear-gradient(135deg, rgba(35, 58, 77, 0.93), rgba(31, 35, 32, 0.88)),
+        url("assets/federal-leadership-hall.png") center / cover;
+      box-shadow: var(--shadow);
+    }
+
+    .hemi-panel h3,
+    .hemi-panel .section-kicker {
+      color: var(--white);
+    }
+
+    .hemi-panel p {
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .hemi-panel .check-list {
+      color: var(--white);
+    }
+
+    .status-large {
+      display: inline-flex;
+      margin-top: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      padding: 10px 14px;
+      color: #e7efd7;
+      background: rgba(255, 255, 255, 0.08);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .site-footer {
+      padding: 28px 20px;
+      color: rgba(255, 255, 255, 0.72);
+      background: #171a17;
+      text-align: center;
+      font-size: 0.82rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 620ms ease, transform 620ms ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1420px) {
+      .brand-name {
+        display: none;
+      }
+    }
+
+    @media (max-width: 1240px) {
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: grid;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .grid-4,
+      .grid-3,
+      .grid-2,
+      .hero-stats,
+      .reach-panel,
+      .hemi-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .funnel {
+        grid-template-columns: 1fr;
+      }
+
+      .funnel-step::after {
+        right: auto;
+        bottom: -22px;
+        content: "v";
+      }
+    }
+
+    @media (max-width: 720px) {
+      .section-inner {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .hero {
+        min-height: 100svh;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .nav-inner {
+        min-height: 64px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand-lockup" href="index.html#top" aria-label="National Hemp Association executive dashboard">
+        <span class="brand-mark" aria-hidden="true"><img src="assets/nha-icon.png" alt=""></span>
+        <span class="brand-name">National Hemp<br>Association</span>
+      </a>
+      <div class="nav-links" aria-label="Dashboard navigation">
+        <a href="index.html#executive">Executive Summary</a>
+        <a class="active" href="membership-activation-strategy.html">Membership Activation Strategy</a>
+        <a href="index.html#assets">Controlled Assets</a>
+        <a href="index.html#growth-engine">Growth Engine</a>
+        <a href="index.html#annual-plan">Annual Plan</a>
+        <a href="index.html#workstreams">Workstreams</a>
+        <a href="index.html#board-actions">Board Decisions</a>
+      </div>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="mobile-panel" id="mobilePanel">
+      <a href="index.html#executive">Executive Summary</a>
+      <a href="membership-activation-strategy.html">Membership Activation Strategy</a>
+      <a href="index.html#assets">Controlled Assets</a>
+      <a href="index.html#growth-engine">Growth Engine</a>
+      <a href="index.html#annual-plan">Annual Plan</a>
+      <a href="index.html#workstreams">Workstreams</a>
+      <a href="index.html#board-actions">Board Decisions</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="section-inner">
+        <div class="section-kicker reveal">Membership Activation Strategy</div>
+        <h1 class="section-title reveal">Turning Audience Control Into Membership Growth</h1>
+        <p class="section-subtitle reveal">
+          Historical records and payment visibility have been recovered. HubSpot and the QuickBooks Online connection are in place. The next engagement will reconcile paid membership and focus recruitment on trusted introductions, partner events, and direct follow-up.
+        </p>
+        <div class="hero-stats">
+          <div class="hero-stat reveal">
+            <strong>58,838+</strong>
+            <span>Social followers</span>
+          </div>
+          <div class="hero-stat reveal">
+            <strong>91,798+</strong>
+            <span>Direct audience connections</span>
+          </div>
+          <div class="hero-stat reveal">
+            <strong>Underway</strong>
+            <span>Paid-member reconciliation</span>
+          </div>
+        </div>
+        <div class="button-row reveal">
+          <a class="btn btn-primary" href="#membership-update">View November Update</a>
+          <a class="btn btn-outline" href="index.html#annual-plan">Back to Plan Comparison</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-update" id="membership-update">
+      <div class="section-inner">
+        <div class="section-kicker">November 10, 2026</div>
+        <h2>Membership Recovery and Next Steps</h2>
+        <div class="note-grid">
+          <article class="card report-card"><h3>Recovered and Established</h3><p>WishList Member records, levels, and access information were recovered along with historical payment visibility. In November, NHA established HubSpot, connected QuickBooks Online, and set up the membership invoicing workflow.</p></article>
+          <article class="card report-card"><h3>Verification Underway</h3><p>Reconcile paid members against historical records and collected dues. Verify end-to-end invoice sync before treating the new workflow as a source for Board reporting.</p></article>
+          <article class="card report-card"><h3>Recruitment and Communications</h3><p>Use survey findings in social posts, newsletters, and event conversations. Leadership assesses that social has historically contributed limited paid membership. Recruit through trusted introductions, partner events, and direct follow-up. Track qualified conversations, paid joins, renewals, and collected dues by source.</p></article>
+          <article class="card report-card"><h3>Website and Member Value</h3><p>Schedule the full overhaul after the holidays. Improve the experience for joining and renewing, make research easier to find, and increase committee visibility.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="audience-assets">
+      <div class="section-inner">
+        <div class="section-kicker reveal">June Audience Snapshot</div>
+        <h2 class="section-title reveal">A Recoverable Growth Engine</h2>
+        <p class="section-subtitle reveal">
+          Figures carried forward from the June briefing. Combined audience connections may overlap across channels. Paid membership and current channel counts require separate verification.
+        </p>
+
+        <div class="grid-4">
+          <div class="card kpi-card reveal">
+            <div class="kpi-number">32,960</div>
+            <div class="kpi-label">Email Database</div>
+            <div class="kpi-caption">Contacts recovered for review and activation.</div>
+          </div>
+          <div class="card kpi-card reveal">
+            <div class="kpi-number">15,719</div>
+            <div class="kpi-label">Active Subscribers</div>
+            <div class="kpi-caption">Active newsletter audience at the June reporting snapshot.</div>
+          </div>
+          <div class="card kpi-card reveal">
+            <div class="kpi-number">46,000+</div>
+            <div class="kpi-label">Facebook</div>
+            <div class="kpi-caption">Largest restored social audience.</div>
+          </div>
+          <div class="card kpi-card reveal">
+            <div class="kpi-number">8,152</div>
+            <div class="kpi-label">X</div>
+            <div class="kpi-caption">Policy and public conversation channel.</div>
+          </div>
+          <div class="card kpi-card reveal">
+            <div class="kpi-number">3,998</div>
+            <div class="kpi-label">Instagram</div>
+            <div class="kpi-caption">Visual storytelling and campaign channel.</div>
+          </div>
+          <div class="card kpi-card reveal">
+            <div class="kpi-number">688</div>
+            <div class="kpi-label">YouTube</div>
+            <div class="kpi-caption">Education and meeting-content channel.</div>
+          </div>
+          <div class="card kpi-card reveal">
+            <div class="kpi-number">164,155+</div>
+            <div class="kpi-label">Website Visitors</div>
+            <div class="kpi-caption">Monthly visitors.</div>
+          </div>
+          <div class="card kpi-card reveal">
+            <div class="kpi-number">226,545+</div>
+            <div class="kpi-label">Website Pageviews</div>
+            <div class="kpi-caption">Monthly pageviews.</div>
+          </div>
+          <div class="card kpi-card reveal">
+            <div class="kpi-number">91,798+</div>
+            <div class="kpi-label">Direct Connections</div>
+            <div class="kpi-caption">Email contacts plus social followers.</div>
+          </div>
+        </div>
+
+        <div class="reach-panel reveal">
+          <div class="reach-metric">
+            <strong>58,838+</strong>
+            <span>Social followers</span>
+          </div>
+          <div class="reach-metric">
+            <strong>32,960</strong>
+            <span>Email contacts</span>
+          </div>
+          <div class="reach-metric">
+            <strong>91,798+</strong>
+            <span>Direct audience connections</span>
+          </div>
+          <p>
+            NHA possesses a significant audience asset that can be activated to support membership growth, policy engagement, sponsorship development, and industry education.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: #fff;">
+      <div class="section-inner">
+        <div class="section-kicker reveal">Membership Activation Funnel</div>
+        <h2 class="section-title reveal">From Education to Industry Growth</h2>
+        <p class="section-subtitle reveal">
+          The Goodness of Hemp&reg; Campaign gives NHA a mission-aligned education platform that can introduce, nurture, convert, and retain industry stakeholders. The Goodness of Hemp Act is the actual policy launched in conjunction with the campaign.
+        </p>
+
+        <div class="funnel reveal" aria-label="Membership activation funnel">
+          <div class="funnel-step">Goodness of Hemp&reg; Campaign</div>
+          <div class="funnel-step">Education</div>
+          <div class="funnel-step">Newsletter</div>
+          <div class="funnel-step">NHA Membership</div>
+          <div class="funnel-step">Advocacy</div>
+          <div class="funnel-step">Sponsors</div>
+          <div class="funnel-step">Industry Growth</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <div class="section-kicker reveal">Original Membership Activation Strategy</div>
+        <h2 class="section-title reveal">Four Phases of Growth</h2>
+        <p class="section-subtitle reveal">
+          The sequence starts with data integrity, then moves into audience reengagement, membership conversion, and sustainable sponsor development.
+        </p>
+
+        <div class="grid-4">
+          <div class="card strategy-card reveal">
+            <span class="phase-tag">Phase 1</span>
+            <h3>Audit &amp; Baseline</h3>
+            <span class="status-chip green">In Progress</span>
+            <ul class="check-list">
+              <li><span class="check">&#10003;</span>Validate member records</li>
+              <li><span class="check">&#10003;</span>Reconcile historical data</li>
+              <li><span class="check">&#10003;</span>Establish KPIs</li>
+              <li><span class="check">&#10003;</span>Build baseline reporting</li>
+            </ul>
+          </div>
+          <div class="card strategy-card reveal">
+            <span class="phase-tag">Phase 2</span>
+            <h3>Reengagement</h3>
+            <span class="status-chip green">Beginning</span>
+            <ul class="check-list">
+              <li><span class="check">&#10003;</span>Relaunch newsletter</li>
+              <li><span class="check">&#10003;</span>Reconnect with subscribers</li>
+              <li><span class="check">&#10003;</span>Reintroduce NHA priorities</li>
+              <li><span class="check">&#10003;</span>Promote member value</li>
+            </ul>
+          </div>
+          <div class="card strategy-card reveal">
+            <span class="phase-tag">Phase 3</span>
+            <h3>Membership Conversion</h3>
+            <span class="status-chip">Planned</span>
+            <ul class="check-list">
+              <li><span class="check">&#10003;</span>Convert subscribers into members</li>
+              <li><span class="check">&#10003;</span>Expand membership outreach</li>
+              <li><span class="check">&#10003;</span>Improve onboarding experience</li>
+              <li><span class="check">&#10003;</span>Increase engagement</li>
+            </ul>
+          </div>
+          <div class="card strategy-card reveal">
+            <span class="phase-tag">Phase 4</span>
+            <h3>Sponsor Development</h3>
+            <span class="status-chip">Planned</span>
+            <ul class="check-list">
+              <li><span class="check">&#10003;</span>Develop sponsor opportunities</li>
+              <li><span class="check">&#10003;</span>Create sponsorship packages</li>
+              <li><span class="check">&#10003;</span>Support communications programs</li>
+              <li><span class="check">&#10003;</span>Build sustainable revenue</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hemi-panel reveal">
+          <div>
+            <div class="section-kicker">HEMI Alignment</div>
+            <h3>HEMI Membership Alignment</h3>
+            <p>
+              NHA and HEMI are evaluating a coordinated membership and CRM framework designed to improve member experience, audience engagement, communications, and long-term organizational sustainability.
+            </p>
+            <span class="status-large">Planning Phase</span>
+          </div>
+          <div>
+            <p>Current focus includes:</p>
+            <ul class="check-list">
+              <li><span class="check">&#10003;</span>Historical member reconciliation</li>
+              <li><span class="check">&#10003;</span>CRM architecture planning</li>
+              <li><span class="check">&#10003;</span>Joint membership opportunities</li>
+              <li><span class="check">&#10003;</span>Audience activation</li>
+              <li><span class="check">&#10003;</span>Newsletter integration</li>
+              <li><span class="check">&#10003;</span>Long-term member experience</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    National Hemp Association | Membership Activation Strategy | October Board Briefing
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mobilePanel = document.querySelector("#mobilePanel");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mobilePanel.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.querySelectorAll(".mobile-panel a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobilePanel.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1240 && mobilePanel.classList.contains("open")) {
+        mobilePanel.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -10% 0px", threshold: 0.12 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+  </script>
+</body>
+</html>

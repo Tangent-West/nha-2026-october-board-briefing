@@ -1,0 +1,107 @@
+NHA 2026 October Board Briefing
+Reporting through November 10, 2026
+
+Executive Summary
+The April 21 leadership transition coincided with federal policy uncertainty,
+strained industry relationships, recovery of critical accounts, and the launch
+of HEMI and the Goodness of Hemp campaign. Sully Sullivan and Laura Franklin,
+through Tangent West, worked alongside the Board, HEMI, and contributing
+partners to restore NHA operations and deliver national research, USDA
+applications, communications, advocacy, and partnerships.
+
+Original Plan and Delivery
+The plan called for foundation work in days 0-90, activation in days 90-120,
+execution through day 180, and measurement and expansion afterward.
+
+April 21-July 20
+- Audited 30+ backend systems, repaired payment and checkout functions, and
+  restored initial financial visibility and historical member records.
+- Rolled out leadership and the campaign, engaged the Board and SCOHO, and
+  reactivated CongressPlus through The Soft Edge on June 24. Tell Congress followed.
+
+July 21-October 20
+- Conducted the national survey and published the inaugural benchmark on
+  September 29, with participants from at least 36 states. Voluntary,
+  self-reported ratings averaged 2.25 out of 5 for industry conditions.
+- Submitted separate FY2027 USDA/FAS Market Access Program (MAP) and Emerging
+  Markets Program (EMP) applications with 29 letters of support. MAP addressed
+  exporter readiness, buyer engagement, and international market development.
+  EMP proposed technical market-access work in Malawi, Rwanda, Zimbabwe, and Zambia.
+- Resumed newsletters and dedicated emails, published leadership blogs,
+  developed the LinkedIn newsletter, coordinated with HEMI, prepared policy
+  and partner materials, and participated in research and industry events.
+- CongressPlus recorded 3,389 cumulative activities as of October 14.
+  A November total requires a current export.
+
+October 21-November 10
+- Participated in ABLC NEXT and advanced the updated Goodness of Hemp site.
+- Established HubSpot, connected QuickBooks Online, and set up the membership
+  invoicing workflow. Paid-member reconciliation and invoice sync verification
+  remain open.
+- Prepared refreshed SCOHO member bios and logos. Publication remains to be
+  confirmed. SCOHO and SCIHO provided support letters.
+- Planned for the onsite USDA/FAS compliance review.
+
+System Recovery
+PayPal merchant account for account access and transaction visibility. PayPal
+Payflow Gateway for website payment processing and recurring billing. PayPal
+Manager for Payflow administration. Intuit QuickBooks for accounting visibility.
+Truist for banking and treasury access. BILL/Divvy for staff finance access.
+WishList Member for historical records, levels, and access. WordPress and Divi
+for functionality, checkout, publishing, and updates. SiteGround for hosting.
+LastPass for credential management. Constant Contact for newsletters and
+historical audience access. Facebook, X, Instagram, YouTube, and LinkedIn Page
+for administration and publishing. CongressPlus through The Soft Edge for
+advocacy. SAM.gov, UEI, and USDA/FAS Unified Export Strategy for registration,
+readiness, and administration. GoDaddy, Google Workspace, and the Executive
+Director mailbox were included in the handoff. Confirm ownership and transfer.
+
+Program Notes
+- FY2024 EMP assessments in Malawi, Rwanda, and Ghana were completed. Verify
+  financial reporting, reimbursement, and administrative closeout separately.
+- NHA supported the Hawaii Fibers/Hemp Paper Company proposal and collaborated
+  with Shawn Ledig and Delta AgroFiber Solutions on Louisiana research and funding.
+- Record applications, awards, funding commitments, and cash received separately.
+  Verify fundraising outcomes before reporting figures.
+- HEMI leads Goodness of Hemp education and marketing. NHA leads and funds
+  policy advocacy.
+
+Events and Industry Relationships
+- July 27, U.S. Biochar Coalition webinar. Laura and Sully presented Seed to
+  Sequestration: The Industrial Hemp & Biochar Connection. Laura represented
+  HITA. Sully represented NHA and HITA.
+- September 10, USDA-ARS stakeholder event at Cornell AgriTech in Geneva,
+  New York. Represented NHA and HITA virtually in a stakeholder presentation
+  connected to the national hemp germplasm program.
+- October 8, Hemp in the Built Environment, Belgrade, Montana. Supported
+  IND HEMP with promotion, on-site filming support, and recap coverage.
+- October 21-23, ABLC NEXT, San Francisco. Engaged partners across agriculture,
+  biobased materials, and industrial supply chains.
+
+Next Engagement and Board Decisions
+- Schedule the NHA website overhaul after the holidays. Improve joining,
+  renewals, research access, committee visibility, and member value.
+- Use survey findings for social content, newsletters, conversations, and
+  events. Leadership assesses that social media has contributed limited paid
+  membership. Prioritize trusted introductions, partner events, and direct
+  follow-up. Track qualified conversations, paid joins, renewals, and
+  collected dues by source.
+- Pursue grants, sponsorships, and event partnerships. Define the audience,
+  NHA role, owner, expected cost, and intended outcome for each opportunity.
+- Explore joint leadership of the existing Standing Committee for Social
+  Equity with its current leaders. Identify a participation barrier and an
+  initial project with the community it would serve.
+- Submit the USDA/FAS participant profile and supporting records by November
+  20, 2026. Prepare for the March 1-5, 2027 onsite review in Washington, D.C.
+  Seek partner meetings, sponsorship conversations, and awareness events.
+- Align the next contract's priorities, owners, budget, and measures. Request
+  sponsor introductions, event partnerships, direct member outreach, and
+  committee participation.
+- Review monthly with management and report quarterly to the Board on paid
+  membership, collected dues, funding stages, event follow-up, and compliance.
+
+June Board Briefing
+https://tangent-west.github.io/nha-2026-june-board-briefing/
+
+National Hemp Industry Benchmark Report
+https://nationalhempassociation.org/nha-releases-2026-national-hemp-industry-benchmark-report/

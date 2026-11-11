@@ -1,0 +1,392 @@
+.october-briefing {
+  overflow-wrap: anywhere;
+}
+
+.october-briefing .section {
+  padding-block: 76px;
+}
+
+.october-briefing .section-title {
+  font-size: 3.5rem;
+  line-height: 1.05;
+}
+
+.october-briefing .section-subtitle {
+  font-size: 1.125rem;
+}
+
+.october-briefing .hero {
+  position: relative;
+  min-height: 88svh;
+}
+
+.october-briefing .hero-content {
+  padding-block: 100px 60px;
+}
+
+.october-briefing .hero h1 {
+  max-width: 16ch;
+  margin-inline: auto;
+  font-size: 4.75rem;
+  line-height: 1.03;
+  text-transform: none;
+}
+
+.october-briefing .hero .hero-deck {
+  font-size: 1.25rem;
+}
+
+.october-briefing .hero .hero-cutoff {
+  color: #e4edcf;
+  font-size: .95rem;
+  font-weight: 700;
+}
+
+.october-briefing .nav-links {
+  gap: 20px;
+  font-size: .75rem;
+}
+
+.october-briefing .mobile-panel {
+  max-height: calc(100dvh - 72px);
+  overflow-y: auto;
+}
+
+.october-briefing .btn {
+  line-height: 1.25;
+  text-align: center;
+}
+
+.october-briefing .kpi-number {
+  font-size: 2.75rem;
+  line-height: 1.15;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 90;
+  top: 8px;
+  left: 8px;
+  padding: 12px 16px;
+  color: var(--ink);
+  background: var(--white);
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+.october-briefing :focus-visible {
+  outline: 3px solid #ad793d;
+  outline-offset: 4px;
+}
+
+.video-toggle {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffffff75;
+  border-radius: 50%;
+  background: #1f2320da;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.executive-note {
+  max-width: 830px;
+  margin: 32px 0 0;
+  border-left: 3px solid var(--green);
+  padding: 0 0 0 22px;
+}
+
+.executive-note p {
+  margin: 0 0 12px;
+  font: 1.25rem/1.6 Georgia, serif;
+}
+
+.executive-note footer {
+  color: #dfe9c9;
+  font-size: .9rem;
+}
+
+.plan-phases {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 34px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plan-phases li {
+  border-top: 3px solid var(--green);
+  padding: 12px 4px 0;
+}
+
+.plan-phases span, .plan-phases strong {
+  display: block;
+}
+
+.plan-phases span, .period-label {
+  margin-bottom: 5px;
+  color: var(--brown);
+  font-size: .76rem;
+  font-weight: 750;
+}
+
+.comparison {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.comparison caption {
+  padding: 14px 18px;
+  text-align: left;
+  color: var(--muted);
+  font-size: .875rem;
+}
+
+.comparison th, .comparison td {
+  padding: 16px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison thead {
+  color: var(--white);
+  background: #303b2d;
+}
+
+.comparison thead th:first-child {
+  width: 19%;
+}
+
+.comparison thead span {
+  color: #e0e9d1;
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+.comparison tbody tr {
+  border-top: 1px solid var(--line);
+}
+
+.comparison tbody th {
+  color: var(--brown);
+  background: #f6f3ec;
+}
+
+.comparison td {
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+.comparison td + td {
+  border-left: 1px solid var(--line);
+}
+
+.period-label {
+  display: none;
+}
+
+.recovery-band {
+  border-block: 1px solid var(--line);
+  background: #fff;
+}
+
+.system-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 28px;
+  margin: 34px 0 0;
+}
+
+.system-list > div {
+  border-top: 1px solid var(--line);
+  padding: 14px 0;
+}
+
+.system-list dt, .compact-list dt {
+  color: var(--ink);
+  font-weight: 750;
+}
+
+.system-list dd, .compact-list dd {
+  margin: 4px 0 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.note-grid, .program-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.note-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.program-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.report-card {
+  padding: 22px;
+}
+
+.report-card h3 {
+  margin: 0 0 12px;
+  font: 1.55rem/1.17 Georgia, serif;
+}
+
+.report-card p, .report-card li {
+  font-size: .95rem;
+  line-height: 1.62;
+}
+
+.report-card p:last-child {
+  margin-bottom: 0;
+}
+
+.state {
+  display: block;
+  margin-bottom: 10px;
+  color: #4a642b;
+  font-size: .76rem;
+  font-weight: 800;
+}
+
+.state.pending {
+  color: var(--brown);
+}
+
+.compact-list > div {
+  border-top: 1px solid var(--line);
+  padding: 9px 0;
+  font-size: .88rem;
+}
+
+.report-link, .detail-links a {
+  color: var(--brown);
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.detail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+  margin-top: 24px;
+}
+
+.deadline-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 26px;
+  border-block: 1px solid var(--line);
+  background: #edf0e5;
+}
+
+.deadline-strip > div {
+  padding: 18px 20px;
+}
+
+.deadline-strip > div + div {
+  border-left: 1px solid var(--line);
+}
+
+.deadline-strip strong {
+  display: block;
+  margin-top: 5px;
+}
+
+.closing-links {
+  justify-content: flex-start;
+}
+
+.detail-update {
+  padding-block: 58px;
+  background: #fff;
+}
+
+.detail-update h2 {
+  margin: 0 0 14px;
+  color: #1f2320;
+  font: 2.25rem/1.15 Georgia, serif;
+}
+
+.detail-update p, .detail-update li {
+  max-width: 76ch;
+  line-height: 1.65;
+}
+
+@media (max-width: 980px) {
+  .program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .october-briefing .hero h1 {
+    font-size: 3.75rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .october-briefing .section {
+    padding-block: 54px;
+  }
+
+  .october-briefing .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .october-briefing .section-title {
+    font-size: 2.5rem;
+  }
+
+  .plan-phases {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .note-grid, .program-grid, .system-list, .deadline-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .deadline-strip > div + div {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .comparison table, .comparison tbody, .comparison tr, .comparison th, .comparison td {
+    display: block;
+    width: 100%;
+  }
+
+  .comparison thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+
+  .comparison td + td {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .period-label {
+    display: block;
+  }
+}
