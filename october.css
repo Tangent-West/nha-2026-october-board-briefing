@@ -126,11 +126,11 @@
   padding: 12px 4px 0;
 }
 
-.plan-phases span, .plan-phases strong {
+.plan-phases strong {
   display: block;
 }
 
-.plan-phases span, .period-label {
+.period-label {
   margin-bottom: 5px;
   color: var(--brown);
   font-size: .76rem;
@@ -169,12 +169,6 @@
 
 .comparison thead th:first-child {
   width: 19%;
-}
-
-.comparison thead span {
-  color: #e0e9d1;
-  font-size: .8rem;
-  font-weight: 500;
 }
 
 .comparison tbody tr {
@@ -216,12 +210,12 @@
   padding: 14px 0;
 }
 
-.system-list dt, .compact-list dt {
+.system-list dt {
   color: var(--ink);
   font-weight: 750;
 }
 
-.system-list dd, .compact-list dd {
+.system-list dd {
   margin: 4px 0 0;
   color: var(--muted);
   line-height: 1.45;
@@ -265,16 +259,6 @@
   color: #4a642b;
   font-size: .76rem;
   font-weight: 800;
-}
-
-.state.pending {
-  color: var(--brown);
-}
-
-.compact-list > div {
-  border-top: 1px solid var(--line);
-  padding: 9px 0;
-  font-size: .88rem;
 }
 
 .report-link, .detail-links a {
