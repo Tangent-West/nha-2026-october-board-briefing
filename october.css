@@ -352,7 +352,7 @@
     border-top: 1px solid var(--line);
   }
 
-  .comparison table, .comparison tbody, .comparison tr, .comparison th, .comparison td {
+  .comparison table, .comparison caption, .comparison tbody, .comparison tr, .comparison th, .comparison td {
     display: block;
     width: 100%;
   }
