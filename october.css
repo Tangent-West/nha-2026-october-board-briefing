@@ -32,10 +32,6 @@
   text-transform: none;
 }
 
-.october-briefing .hero .hero-deck {
-  font-size: 1.25rem;
-}
-
 .october-briefing .hero .hero-cutoff {
   color: #e4edcf;
   font-size: .95rem;
@@ -147,13 +143,6 @@
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-}
-
-.comparison caption {
-  padding: 14px 18px;
-  text-align: left;
-  color: var(--muted);
-  font-size: .875rem;
 }
 
 .comparison th, .comparison td {
@@ -348,7 +337,7 @@
     border-top: 1px solid var(--line);
   }
 
-  .comparison table, .comparison caption, .comparison tbody, .comparison tr, .comparison th, .comparison td {
+  .comparison table, .comparison tbody, .comparison tr, .comparison th, .comparison td {
     display: block;
     width: 100%;
   }
